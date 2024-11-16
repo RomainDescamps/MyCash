@@ -9,4 +9,12 @@ export default defineNuxtConfig({
     modelsDir: 'models',
     devtools: true,
   },
+  pwa: {
+    manifest: {
+      name: 'MyCash',
+      short_name: 'MyCash',
+      description: 'MyCash is a simple and efficient personal finance management tool.',
+      lang: 'fr',
+    },
+  },
 });
