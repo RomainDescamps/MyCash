@@ -15,6 +15,17 @@ export default defineNuxtConfig({
       short_name: 'MyCash',
       description: 'MyCash is a simple and efficient personal finance management tool.',
       lang: 'fr',
+      start_url: "/",
+      display: "standalone",
+      background_color: "#ffffff",
+      theme_color: "#4DBA87",
+      icons: [
+        {
+          src: "/icons/icon-512x512.png",
+          sizes: "512x512",
+          type: "image/png"
+        }
+      ]
     },
   },
   build: {
