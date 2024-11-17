@@ -1,7 +1,7 @@
 <template>
-  <v-app>
+  <div>
+    <h1>Hello World, Jenkins build this</h1>
     <NuxtPwaManifest />
     <NuxtPage />
-    <index />
-  </v-app>
+  </div>
 </template>
