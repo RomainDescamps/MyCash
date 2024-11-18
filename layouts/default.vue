@@ -1,9 +1,9 @@
 <template>
   <v-app>
-    <drawer />
     <v-app-bar app>
-      <v-toolbar-title>MyCash</v-toolbar-title>
+      <v-btn @click="toggleTheme">toggle theme</v-btn>
     </v-app-bar>
+    <drawer />
     <v-main>
       <v-container>
         <slot />
@@ -12,13 +12,14 @@
   </v-app>
 </template>
 
-<script>
+<script setup>
 import drawer from '~/components/drawer.vue';
+import { useTheme } from 'vuetify'
 
-export default {
-  name: 'default',
-  components: {
-    drawer
-  }
-};
+const theme = useTheme()
+
+const toggleTheme = () => {
+  theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark'
+}
+
 </script>
