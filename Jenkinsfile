@@ -15,8 +15,8 @@ pipeline {
             steps {
                 // On supprimer le contenu du dossier de destination
                 sh "rm -rf /nodeApp/*"
-                // On prend tous fichiers du workspace meme les fichiers caché et on les copie dans le dossier de destination qui se trouve dans le dossier nodeApp qui est a la racine du serveur 
-                sh "cp -r . /nodeApp/"
+                // On prend les fichiers output du workspace meme les fichiers caché et on les copie dans le dossier de destination qui se trouve dans le dossier nodeApp qui est a la racine du serveur 
+                sh "cp -r .output /nodeApp/"
             }
         }
     }
