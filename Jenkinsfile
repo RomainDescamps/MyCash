@@ -17,6 +17,8 @@ pipeline {
                 sh "rm -rf /nodeApp/*"
                 // On prend les fichiers output du workspace meme les fichiers caché et on les copie dans le dossier de destination qui se trouve dans le dossier nodeApp qui est a la racine du serveur 
                 sh "cp -r .output /nodeApp/"
+                // On copie le ficher de configuration dans le dossier de destination
+                sh "cp -r ecosystem.config.cjs /nodeApp/"
             }
         }
     }
